@@ -1,0 +1,73 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Assets/First Plant.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Character/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Assets/empty quarters.png" type="Texture" id=3]
+[ext_resource path="res://Assets/beach painting 1.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Assets/plant 2.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Assets/quarters sofa.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Assets/QuartersBed.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Assets/Synth kitchen quarters.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Assets/quarters coffee table.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Assets/planet deco 1.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Assets/plant 3.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Assets/quartrs sofa small.tscn" type="PackedScene" id=12]
+[ext_resource path="res://Assets/planet painting 1.tscn" type="PackedScene" id=13]
+[ext_resource path="res://Assets/long sofa chair.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Assets/side table 1.tscn" type="PackedScene" id=15]
+
+[node name="Scene1" type="Node2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 161, 90 )
+scale = Vector2( 0.717778, 0.732 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Player" parent="YSort" instance=ExtResource( 2 )]
+position = Vector2( 148, 136 )
+
+[node name="Plant 1" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 146, 56 )
+
+[node name="Bed" parent="YSort" instance=ExtResource( 7 )]
+
+[node name="Beach Painting 1" parent="YSort" instance=ExtResource( 4 )]
+
+[node name="Planet Painting" parent="YSort" instance=ExtResource( 13 )]
+
+[node name="Plant 2" parent="YSort" instance=ExtResource( 5 )]
+
+[node name="Synth Kitchen" parent="YSort" instance=ExtResource( 8 )]
+
+[node name="Long Sofa" parent="YSort" instance=ExtResource( 14 )]
+
+[node name="Large Sofa" parent="YSort" instance=ExtResource( 6 )]
+position = Vector2( 94, 102 )
+
+[node name="Planet Deco" parent="YSort" instance=ExtResource( 10 )]
+position = Vector2( 133, 162 )
+
+[node name="Small Sofa" parent="YSort" instance=ExtResource( 12 )]
+position = Vector2( 127, 83 )
+
+[node name="Coffee Table" parent="YSort" instance=ExtResource( 9 )]
+position = Vector2( 132, 126 )
+
+[node name="Plant 3" parent="YSort" instance=ExtResource( 11 )]
+position = Vector2( 209, 70 )
+
+[node name="Side Table" parent="YSort" instance=ExtResource( 15 )]
+position = Vector2( 102, 85 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( -1, 1 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+visible = false
+position = Vector2( -1, 0 )
+polygon = PoolVector2Array( 0, 44, 19, 46, 18, 153, 25, 160, 149, 160, 155, 157, 155, 77, 201, 78, 201, 125, 207, 126, 296, 125, 299, 113, 298, 46, 196, 44, 197, 54, 158, 54, 157, 45, 16, 44, 0, 42, 2, 0, 320, 1, 320, 179, 1, 180 )
